@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1 {
+	@apply text-h1 font-h1 font-sans;
+}
+
+h2 {
+	@apply text-h2 font-h2 font-sans;
+}
+
+h3 {
+	@apply text-h3 font-h3 font-sans;
+}
+
+h4 {
+	@apply text-h4 font-h4 font-nunito;
+}
+
+.body1 {
+	@apply text-body1 font-body1 font-nunito;
+}
+
+.body2 {
+	@apply text-body2 font-body2 font-nunito;
+}
+
+.caption {
+	@apply text-caption font-caption font-nunito;
+}
+
+.label {
+	@apply text-label font-label font-nunito;
+}
+
+.button-text {
+	@apply text-button font-button font-nunito;
+}
+
+@layer utilities {
+	@media (min-width: 640px) {
+		.text-h1 {
+			font-size: 3.5rem; /* 56px */
+		}
+		.text-h2 {
+			font-size: 2.75rem; /* 44px */
+		}
+		.text-h3 {
+			font-size: 2rem; /* 32px */
+		}
+		.text-h4 {
+			font-size: 1.5rem; /* 24px */
+		}
+		.text-body1 {
+			font-size: 1.125rem; /* 18px */
+		}
+		.text-body2 {
+			font-size: 1rem; /* 16px */
+		}
+		.text-caption {
+			font-size: 0.875rem; /* 14px */
+		}
+		.text-button {
+			font-size: 1.125rem; /* 18px */
+		}
+		.text-label {
+			font-size: 1rem; /* 16px */
+		}
+	}
+
+	@media (min-width: 1024px) {
+		/* lg */
+		.text-h1 {
+			font-size: 4rem; /* 64px */
+		}
+		.text-h2 {
+			font-size: 3rem; /* 48px */
+		}
+		.text-h3 {
+			font-size: 2.25rem; /* 36px */
+		}
+		.text-h4 {
+			font-size: 1.75rem; /* 28px */
+		}
+		.text-body1 {
+			font-size: 1.25rem; /* 20px */
+		}
+		.text-body2 {
+			font-size: 1rem; /* 16px */
+		}
+		.text-caption {
+			font-size: 0.875rem; /* 14px */
+		}
+		.text-button {
+			font-size: 1.125rem; /* 18px */
+		}
+		.text-label {
+			font-size: 1rem; /* 16px */
+		}
+	}
+}
+
+.menu-mobile {
+	@apply text-h3 font-h3 font-nunito md:text-body1 md:font-h4;
+}
+
+.button-social {
+	@apply button-text flex flex-row items-center justify-center gap-2 pl-6 pr-6 pt-2 pb-2 bg-primary text-light-text rounded-lg;
+}
