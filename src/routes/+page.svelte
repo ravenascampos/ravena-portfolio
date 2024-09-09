@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import AboutSection from '@/lib/components/AboutSection/AboutSection.svelte';
+	import ExperienceSection from '@/lib/components/ExperienceSection/ExperienceSection.svelte';
+	import Presentation from '@/lib/components/Presentation/Presentation.svelte';
+	import ProjectsSection from '@/lib/components/ProjectsSection/ProjectsSection.svelte';
+	import SkillsSection from '@/lib/components/SkillsSection/SkillsSection.svelte';
+</script>
+
+<Presentation />
+<AboutSection />
+<SkillsSection />
+<ExperienceSection />
+<ProjectsSection />
