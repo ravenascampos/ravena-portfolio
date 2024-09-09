@@ -4,8 +4,6 @@
 	import Presentation from '@/lib/components/Presentation/Presentation.svelte';
 	import ProjectsSection from '@/lib/components/ProjectsSection/ProjectsSection.svelte';
 	import SkillsSection from '@/lib/components/SkillsSection/SkillsSection.svelte';
-	import { fetchGitHubProjects } from '@/stores/githubProjects';
-	fetchGitHubProjects();
 </script>
 
 <Presentation />
