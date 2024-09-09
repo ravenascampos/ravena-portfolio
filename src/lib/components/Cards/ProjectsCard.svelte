@@ -7,6 +7,7 @@
 	import Button from '../Button/Button.svelte';
 
 	let projects: GitHubProject[] = [];
+	const maxDescriptionLength = 10;
 
 	onMount(() => {
 		const unsubscribe = githubProjects.subscribe((value) => {
@@ -15,25 +16,31 @@
 		console.log(projects);
 		return () => unsubscribe();
 	});
+
+	function truncateDescription(description: string, maxLength: number): string {
+		if (description.length > maxLength) {
+			return description.substring(0, maxLength) + '...';
+		}
+		return description;
+	}
 </script>
 
-<div class="mx-auto grid md:grid-cols-2 md:gap-6">
+<div class="mx-auto w-[300px] flex flex-col md:w-full md:grid md:grid-cols-2 md:gap-6">
 	{#each projects as project, index (index)}
 		<div
-			class="grid grid-cols-2 w-full h-auto items-center gap-4 rounded-lg py-6 px-8 mb-8 dark:bg-dark-text-secondary"
+			class="flex flex-col md:grid md:grid-cols-2 md:w-full md:px-6 h-auto items-center border border-solid border-primary rounded-lg py-6 mb-8 dark:bg-dark-text-secondary"
 		>
 			{#if $isDarkMode}
-				<img src="/images/projects-card-dark.svg" alt="Logo Dark" />
+				<img class="w-[200px] md:w-full" src="/images/projects-card-dark.svg" alt="Logo Dark" />
 			{:else}
-				<img src="/images/projects-card-light.svg" alt="Logo Light" />
+				<img class="w-[200px] md:w-full" src="/images/projects-card-light.svg" alt="Logo Light" />
 			{/if}
 			<div class="flex flex-col gap-4 items-center">
-				<h4 class="text-center text-light-text-secondary">
-					{project.name}
+				<h4
+					class="text-center text-light-text-secondary overflow-hidden text-ellipsis whitespace-nowrap"
+				>
+					{truncateDescription(project.name, maxDescriptionLength)}
 				</h4>
-				<p class="body1 text-center text-light-text description">
-					{project.description}
-				</p>
 				<Button target="_blank" className="secondary-button" href={project.html_url}>
 					<GithubIcon />
 					<span>Github</span>
@@ -42,10 +49,3 @@
 		</div>
 	{/each}
 </div>
-
-<style>
-	.description {
-		@apply overflow-hidden text-ellipsis whitespace-nowrap; /* Tailwind CSS utilities */
-		max-width: 300px; /* Ensure it truncates properly within the container */
-	}
-</style>

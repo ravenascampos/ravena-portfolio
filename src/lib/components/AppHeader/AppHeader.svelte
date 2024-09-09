@@ -27,28 +27,28 @@
 			<ul class="menu-mobile flex flex-col items-center gap-6 mt-16 md:mt-0 md:flex-row md:gap-8">
 				<li>
 					<a
-						href="#about"
+						href="/#about"
 						class="text-light-text dark:text-dark-text hover:text-primary dark:hover:text-secondary"
 						>Sobre</a
 					>
 				</li>
 				<li>
 					<a
-						href="#skills"
+						href="/#skills"
 						class="text-light-text dark:text-dark-text hover:text-primary dark:hover:text-secondary"
 						>Skills</a
 					>
 				</li>
 				<li>
 					<a
-						href="#experience"
+						href="/#experience"
 						class="text-light-text dark:text-dark-text hover:text-primary dark:hover:text-secondary"
 						>Experiências</a
 					>
 				</li>
 				<li>
 					<a
-						href="#projects"
+						href="/my-projects"
 						class="text-light-text dark:text-dark-text hover:text-primary dark:hover:text-secondary"
 						>Projetos</a
 					>
