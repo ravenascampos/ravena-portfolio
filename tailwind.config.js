@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			fontFamily: {
@@ -32,12 +33,16 @@ export default {
 			colors: {
 				primary: '#c83fa9',
 				secondary: '#f3b0dc',
-				'light-text-secondary': '#C874B2',
-				'dark-text-secondary': '#F5D5E0',
-				'light-bg': '#E8ECF4',
-				'dark-bg': '#2e0f38',
-				'light-text': '#210535',
-				'dark-text': '#F7F7F7'
+				light: {
+					text: '#210535',
+					bg: '#E8ECF4',
+					'text-secondary': '#C874B2'
+				},
+				dark: {
+					text: '#F7F7F7',
+					bg: '#2e0f38',
+					'text-secondary': '#F5D5E0'
+				}
 			},
 			backgroundImage: {
 				'gradient-to-r': 'linear-gradient(to right, #F5D5E0, #C874B2)'
