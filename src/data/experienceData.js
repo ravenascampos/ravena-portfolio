@@ -34,6 +34,7 @@ export const experience = [
 	},
 	{
 		title: 'Transição de carreira',
+		enterprise: '-',
 		year: '2021',
 		description: ['Transição de carreira do direito para a área da tecnologia;']
 	},

@@ -33,7 +33,7 @@
 				href="https://www.linkedin.com/in/ravenascampos"
 			>
 				<LinkedinIcon />
-				<span>LinkedIN</span>
+				<span>LinkedIn</span>
 			</Button>
 		</div>
 	</div>
