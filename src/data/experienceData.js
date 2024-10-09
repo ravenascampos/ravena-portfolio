@@ -8,7 +8,8 @@ export const experience = [
 			'.Net;',
 			'ReactJS;',
 			'Frontend em projeto utilizando Svelte;',
-			'Frontend em projeto utilizando Wordpress e Elementor;'
+			'Frontend em projeto utilizando Wordpress e Elementor;',
+			'Projeto junto ao cliente utilizando Angular 12'
 		]
 	},
 	{
